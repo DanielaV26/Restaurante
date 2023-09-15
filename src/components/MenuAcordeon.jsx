@@ -1,5 +1,5 @@
 import { Accordion, AccordionItem } from "@nextui-org/react"
-import { PizzaSvg } from "./Pizzasvg"
+import { PizzaSvg } from "./PizzaSvg"
 import { AcompanamientosSvg } from "./AcompanamientosSvg"
 import { PostresSvg } from "./PostresSvg"
 import { JugosSvg } from "./JugosSvg"
