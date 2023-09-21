@@ -1,6 +1,6 @@
 export const NosotrosCard = () => {
   return (
-    <div className="mt-6 lg:flex justify-center items-center gap-6 md:px-36" id="nosotros">
+    <div className="mt-6 lg:flex justify-center items-center gap-6 md:px-36 px-4" id="nosotros">
     <div className="w-full lg:w-1/2 py-6">
     <h3 className="p-4 text-2xl font-bold border-2 border-zinc-800 rounded-xl w-xl mb-4">
       Nosotros

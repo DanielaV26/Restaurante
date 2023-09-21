@@ -57,13 +57,13 @@ export default function FooterWithSocialMediaIcons() {
           </div>
         </div>
         <Footer.Divider />
-        <div className="w-full sm:flex sm:items-center sm:justify-between">
+        <div className="w-full flex flex-col sm:flex-row sm:items-center sm:justify-between justify-center">
           <Footer.Copyright
             by="La Rústika Pizzería. Todos los derechos reservados.™"
             href="#"
             year={2022}
           />
-          <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
+          <div className="mt-4 flex gap-5 sm:mt-0 sm:justify-center ml-auto">
             <Footer.Icon
               href="#"
               icon={BsInstagram}
