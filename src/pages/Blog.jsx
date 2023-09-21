@@ -1,8 +1,12 @@
 import { Button, Card, CardFooter, CardHeader, Image } from "@nextui-org/react"
+import { Link } from "react-router-dom"
 
 export const Blog = () => {
   return (
-    <div className="lg:flex w-full gap-6 items-center justify-center p-12 px-36">
+    <>
+    <h1 className="font-bold text-xl uppercase mx-auto text-center">blog</h1>
+
+    <div className="flex w-full gap-6 items-center justify-center p-12 md:px-36 flex-col md:flex-row">
     <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-7">
       <CardHeader className="absolute z-10 top-1 flex-col items-start">
       </CardHeader>
@@ -24,9 +28,10 @@ export const Blog = () => {
             <p className="text-tiny text-white/70">Un verdadero fanático de la pizza debe conocer su historia. ¡Te invitamos a conocerla!</p>
           </div>
         </div>
-        <Button radius="full" size="sm">Ver video</Button>
+        <Button as = {Link} to = {"https://www.youtube.com/watch?v=qLhroUktqfU&ab_channel=Infonimados"} radius="full" size="sm">Ver video</Button>
       </CardFooter>
     </Card>
+    
     <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-7">
       <CardHeader className="absolute z-10 top-1 flex-col items-start">
       </CardHeader>
@@ -48,9 +53,10 @@ export const Blog = () => {
             <p className="text-tiny text-white/70">Mantente actualizado sobre las mejores pizzerías del mundo.</p>
           </div>
         </div>
-        <Button radius="full" size="sm">Ver video</Button>
+        <Button as = {Link} to = {"https://www.elperiodico.com/es/cata-mayor/restaurantes/20230503/50-top-pizza-europa-2023-sartoria-panatieri-mejor-pizzeria-86814804"} radius="full" size="sm">Ver artículo</Button>
       </CardFooter>
     </Card>
     </div>
+    </>
   )
 }

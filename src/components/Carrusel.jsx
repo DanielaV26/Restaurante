@@ -2,7 +2,7 @@ import { Carousel } from "flowbite-react";
 
 export function Carrusel() {
   return (
-    <div className="w-full h-[500px] mt-5">
+    <div className="w-full h-60 md:h-[500px] mt-5">
       <Carousel>
       <img
         alt="..."
@@ -22,7 +22,7 @@ export function Carrusel() {
       />
       <img
         alt="..."
-        src="https://flowbite.com/docs/images/carousel/carousel-5.svg"
+        src="https://res.cloudinary.com/dhijxrbsk/image/upload/v1694791891/Absolute_Reality_v16_Generate_an_image_of_a_group_of_friends_e_1_lztb6q.jpg"
       />
     </Carousel>
     </div>

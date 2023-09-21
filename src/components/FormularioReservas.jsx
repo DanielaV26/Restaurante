@@ -161,7 +161,7 @@ export const FormularioReservas = () => {
       </div>
       <TextInput
         id="email2"
-        placeholder="jon doe"
+        placeholder="Nombre Apellido"
         required
         shadow
         type="text"
@@ -176,7 +176,7 @@ export const FormularioReservas = () => {
       </div>
       <TextInput
         id="email2"
-        placeholder="nombre@gmail.com"
+        placeholder="larustika@gmail.com"
         required
         shadow
         type="email"

@@ -2,7 +2,7 @@ import { FormularioReservas } from '../components/FormularioReservas';
 
 export const Reservas = () => {
   return (
-    <div className='flex gap-10'>
+    <div className='flex gap-10 flex-col md:flex-row p-5 '>
       <section className='w-full md:w-1/2'>
         <h1 className='font-bold m-5 text-xl'>Condiciones de reservas</h1>
       <div className='flex flex-col items-start text-start gap-4'>
@@ -13,7 +13,7 @@ export const Reservas = () => {
       <p>5.	Una vez realizada la reserva recibirán un email al instante para reconfirmarla. Si no lo hacen, la reserva se cancelará automáticamente.</p>
       <p>6.	Para cualquier modificación en su reserva, puede escribir a reservas@larustika.com</p>
       </div>
-      <img className='mt-8 rounded-xl' src="assets/images/Absolute_Reality1.jpg" alt="" />
+      <img className='mt-8 rounded-xl' src="https://res.cloudinary.com/dhijxrbsk/image/upload/v1694792822/Absolute_Reality_v16_Generate_an_image_of_the_terrace_of_a_piz_1_qtp5lq.jpg" alt="" />
       </section>
       <FormularioReservas/>
     </div>

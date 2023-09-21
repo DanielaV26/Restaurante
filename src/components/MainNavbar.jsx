@@ -9,16 +9,22 @@ import {
     NavbarBrand,
     NavbarContent,
     NavbarItem,
+    NavbarMenu,
+    NavbarMenuItem,
+    NavbarMenuToggle,
 } from "@nextui-org/react";
 import { LogoTradicion } from "./LogoTradicion";
+import { useState } from "react";
 
 export const MainNavbar = () => {
+  const [isMenuOpen,setIsMenuOpen] = useState(false)
+
   return (
-    <Navbar>
+    <Navbar className="h-28" isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
       <NavbarBrand>
       <Link className="flex justify-center items-center gap-3" to="/">
         <LogoTradicion/>
-        <p className="font-bold text-inherit">La Rústika</p>
+        <p className="body-font font-oleo text-2xl">La Rústika</p>
       </Link>
       </NavbarBrand>
 
@@ -46,6 +52,9 @@ export const MainNavbar = () => {
       </NavbarContent>
 
       <NavbarContent as="div" justify="end">
+        
+        <NavbarMenuToggle className="sm:hidden" aria-label={isMenuOpen?"Close menu":"Open menu"}/>
+        
         <Dropdown placement="bottom-end">
           <DropdownTrigger>
             <Avatar
@@ -69,6 +78,38 @@ export const MainNavbar = () => {
           </DropdownMenu>
         </Dropdown>
       </NavbarContent>
+      <NavbarMenu>
+        <NavbarMenuItem>
+          <Link to ="/" onClick={() => setIsMenuOpen(false)} className="w-full text-center mx-auto p-4" size="lg">
+          Home
+          </Link>
+          <hr />
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link to ="/nosotros" onClick={() => setIsMenuOpen(false)}className="w-full text-center mx-auto p-4" size="lg">
+          Nosotros
+          </Link>
+          <hr />
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link to ="/menu" onClick={() => setIsMenuOpen(false)} className="w-full text-center mx-auto p-4" size="lg">
+          Menú
+          </Link>
+          <hr />
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link to ="/blog" onClick={() => setIsMenuOpen(false)} className="w-full text-center mx-auto p-4" size="lg">
+          Blog
+          </Link>
+          <hr />
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link to ="/reservas" onClick={() => setIsMenuOpen(false)} className="w-full text-center mx-auto p-4" size="lg">
+          Reservas
+          </Link>
+          <hr />
+        </NavbarMenuItem>
+      </NavbarMenu>
     </Navbar>
   );
 };

@@ -6,9 +6,10 @@ import { BsFacebook, BsInstagram, BsWhatsapp } from 'react-icons/bs';
 export default function FooterWithSocialMediaIcons() {
   return (
     <Footer container>
-      <div className="w-full">
-        <div className="grid w-full justify-between sm:flex md:flex md:grid-cols-1">
-          <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-4 sm:gap-6">
+      <div className="w-full md:px-36">
+        <hr />
+        <div className="grid w-full justify-around sm:flex md:flex md:grid-cols-1">
+          <div className="flex flex-col md:flex-row justify-around gap-14 mt-5 flex-wrap">
             <div>
               <Footer.Title title="Locales" />
               <Footer.LinkGroup col>
