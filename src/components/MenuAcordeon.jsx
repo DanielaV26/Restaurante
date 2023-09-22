@@ -11,7 +11,7 @@ import { BebidasCalientesSvg } from "./BebidasCalientesSvg"
 
 export const MenuAcordeon = () => {
   return (
-    <div className="md:px-28 mt-10 font-semibold">
+    <div className="md:px-28 mt-10 font-praise">
     <Accordion selectionMode="multiple">
       <AccordionItem
         key="1"
@@ -21,7 +21,7 @@ export const MenuAcordeon = () => {
           />
         }
         subtitle="Nuestra especialidad son las pizzas a la piedra."
-        title="Pizzas"
+        title={<p className="text-3xl" >Pizzas</p>}
       >
         <div>
           <ul className="gap-3 flex flex-col">

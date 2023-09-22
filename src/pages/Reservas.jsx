@@ -2,8 +2,8 @@ import { FormularioReservas } from '../components/FormularioReservas';
 
 export const Reservas = () => {
   return (
-    <div className='flex gap-10 flex-col md:flex-row p-5 '>
-      <section className='w-full md:w-1/2'>
+    <div className='flex gap-10 flex-col md:flex-row p-5 md:px-28'>
+      <section className='w-full md:w-1/2 md:pl-10'>
         <h1 className='font-praise m-5 text-4xl'>Condiciones de reservas</h1>
       <div className='flex flex-col items-start text-start gap-4'>
       <p >1.	Para poder ofrecerles un buen servicio, es muy importante la puntualidad de todos los comensales de la mesa.</p>

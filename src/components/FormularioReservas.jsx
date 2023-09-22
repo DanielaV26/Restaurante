@@ -1,8 +1,36 @@
 import { Button, Label, TextInput, Select, Datepicker, Textarea} from 'flowbite-react';
+import { db } from '../firebase/firebase';
+import { useState } from 'react';
 
 export const FormularioReservas = () => {
+  const initialForm = {
+    nombre: '',
+    email:'',
+    sector:'',
+    sucursal:'',
+    fecha:'',
+    comensales:'',
+    comentario:'',
+    horario:'',
+  }
+
+  const [reserva, setReserva] = useState(initialForm)
+  
+  const manipuladorDeFormulario = (evento) => {
+    setReserva({
+      ...reserva,
+      [evento.target.name]: evento.target.value
+    })
+  }
+
+  const envioDeFormulario = async (evento) => {
+    evento.preventDefault()
+    console.log(reserva)
+  }
+
+
   return (
-    <form className="flex max-w-md flex-col gap-4 w-full md:w-1/2 mx-auto">
+    <form onSubmit = {envioDeFormulario} className="flex max-w-md flex-col gap-4 w-full md:w-1/2 mx-auto">
         <h1 className='m-5 font-praise text-4xl'>Reserva aquí 👇</h1>
         <div
       className="max-w-md"
@@ -15,7 +43,10 @@ export const FormularioReservas = () => {
         />
       </div>
       <Select
+      onChange={manipuladorDeFormulario}
         id="countries"
+        name="sucursal"
+        value={reserva.sucursal}
         required
       >
         <option className='text-center'>
@@ -37,7 +68,10 @@ export const FormularioReservas = () => {
         />
       </div>
       <Select
+      onChange={manipuladorDeFormulario}
         id="countries"
+        name="comensales"
+        value={reserva.comensales}
         required
       >
         <option className='text-center'>
@@ -79,7 +113,11 @@ export const FormularioReservas = () => {
           value="Selecciona la fecha"
         />
       </div>
-    <Datepicker weekStart={3} labelClearButton="Limpiar" labelTodayButton='Hoy' language="es" autoHide/>
+    <Datepicker 
+    onChange={manipuladorDeFormulario}
+    name="fecha"
+    value={reserva.fecha}
+    weekStart={3} labelClearButton="Limpiar" labelTodayButton='Hoy' language="es" autoHide/>
     </div>
     <div
       className="max-w-md"
@@ -92,7 +130,10 @@ export const FormularioReservas = () => {
         />
       </div>
       <Select
+      onChange={manipuladorDeFormulario}
         id="countries"
+        name="sector"
+        value={reserva.sector}
         required
       >
         <option className='text-center'>
@@ -114,7 +155,10 @@ export const FormularioReservas = () => {
         />
       </div>
       <Select
+      onChange={manipuladorDeFormulario}
         id="countries"
+        name="horario"
+        value={reserva.horario}
         required
       >
         <option className='text-center'>
@@ -160,7 +204,10 @@ export const FormularioReservas = () => {
         />
       </div>
       <TextInput
+      onChange={manipuladorDeFormulario}
         id="email2"
+        name="nombre"
+        value={reserva.nombre}
         placeholder="Nombre Apellido"
         required
         shadow
@@ -175,7 +222,10 @@ export const FormularioReservas = () => {
         />
       </div>
       <TextInput
+      onChange={manipuladorDeFormulario}
         id="email2"
+        name="email"
+        value={reserva.email}
         placeholder="larustika@gmail.com"
         required
         shadow
@@ -193,7 +243,10 @@ export const FormularioReservas = () => {
         />
       </div>
       <Textarea
+      onChange={manipuladorDeFormulario}
         id="comment"
+        name="comentario"
+        value={reserva.comentario}
         placeholder="Escribe un comentario..."
         required
         rows={4}
