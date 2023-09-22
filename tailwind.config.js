@@ -10,9 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily:{
-        'dancing': ['Dancing Script', 'sans-serif'],
-        'arizonia': ['Arizonia', 'sans-serif'],
-        'praise': ['Praise', 'sans-serif']
+        'praise': ['Praise', 'sans-serif'],
+        'mooli': ['Mooli', 'sans-serif'],
       }
     },
   },
