@@ -10,8 +10,9 @@ export default {
   theme: {
     extend: {
       fontFamily:{
-        'comforter': ['Comforter', 'sans-serif'], 
-        'oleo': ['Oleo Script', 'sans-serif']
+        'dancing': ['Dancing Script', 'sans-serif'],
+        'arizonia': ['Arizonia', 'sans-serif'],
+        'praise': ['Praise', 'sans-serif']
       }
     },
   },

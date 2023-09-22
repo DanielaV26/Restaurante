@@ -2,10 +2,10 @@ export const NosotrosCard = () => {
   return (
     <div className="mt-6 lg:flex justify-center items-center gap-6 md:px-36 px-4" id="nosotros">
     <div className="w-full lg:w-1/2 py-6">
-    <h3 className="p-4 text-2xl font-bold border-2 border-zinc-800 rounded-xl w-xl mb-4">
+    <h3 className="p-4 text-5xl font-praise border-2 border-red-200 rounded-xl w-xl mb-4">
       Nosotros
     </h3>
-    <p className="text-left text-lg italic">La Rústika Pizzería nació en el año 2018 como un pequeño emprendimiento. Fue creada en un ambiente familiar, con el objetivo de mantener la estabilidad económica de ese entonces.
+    <p className="text-left text-lg italic">La Rústika Pizzería nació en el año 2018 como un pequeño emprendimiento creado en un ambiente familiar.
 </p>
 <p className="text-left text-lg italic">
 Debido a la gran aceptación y divulgación de nuestros clientes, nuestro emprendimiento creció enormemente durante estos años, logrando inaugurar dos locales físicos, uno en Santiago y otro en Algarrobo.

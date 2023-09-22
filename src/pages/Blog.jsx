@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 export const Blog = () => {
   return (
     <>
-    <h1 className="font-bold text-xl uppercase mx-auto text-center">blog</h1>
+    <h1 className="font-praise text-4xl mx-auto text-center">Mantente informado con nuestro Blog</h1>
 
     <div className="flex w-full gap-6 items-center justify-center p-12 md:px-36 flex-col md:flex-row">
     <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-7">
@@ -25,7 +25,7 @@ export const Blog = () => {
           />
           <div className="flex flex-col">
             <p className="text-tiny text-white/80 font-bold uppercase">Historia de la pizza</p>
-            <p className="text-tiny text-white/70">Un verdadero fanático de la pizza debe conocer su historia. ¡Te invitamos a conocerla!</p>
+            <p className="text-tiny text-white/70">Un verdadero fanático de la pizza debe conocer su historia. <p></p> ¡Te invitamos a conocerla!</p>
           </div>
         </div>
         <Button as = {Link} to = {"https://www.youtube.com/watch?v=qLhroUktqfU&ab_channel=Infonimados"} radius="full" size="sm">Ver video</Button>

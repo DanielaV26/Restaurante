@@ -3,7 +3,7 @@ import { Button, Label, TextInput, Select, Datepicker, Textarea} from 'flowbite-
 export const FormularioReservas = () => {
   return (
     <form className="flex max-w-md flex-col gap-4 w-full md:w-1/2 mx-auto">
-        <h1 className='m-5 font-bold text-xl'>Reserva aquí 👇</h1>
+        <h1 className='m-5 font-praise text-4xl'>Reserva aquí 👇</h1>
         <div
       className="max-w-md"
       id="select"

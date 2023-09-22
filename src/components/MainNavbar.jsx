@@ -24,7 +24,7 @@ export const MainNavbar = () => {
       <NavbarBrand>
       <Link className="flex justify-center items-center gap-3" to="/">
         <LogoTradicion/>
-        <p className="body-font font-oleo text-2xl">La Rústika</p>
+        <p className="body-font font-praise text-4xl">La Rústika</p>
       </Link>
       </NavbarBrand>
 
