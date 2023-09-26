@@ -1,9 +1,29 @@
 # Restaurante
 
-Aplicación que consume una API para obtener datos y graficarlos.
+Página web de un Restaurante de Pizzas, en donde se pueden generar reservas.
 
-## Tercer proyecto Bootcamp UDD
+## Cuarto proyecto Bootcamp UDD
 
-En este proyecto se trabajó con la librería de gráficas llamada Chart.js y además se hizo una conexión a través de la API de Pokémon para obtener sus datos, específicamente sobre las habilidades de los Pokemones.
+Este proyecto está enfocado en construir una aplicación web para un restaurante. En él se incluye:
 
-[Dashboard]
+-_Página principal con un carrusel de fotos del restaurante._  :sparkles:  
+-_Sección "Nosotros" en donde se entrega información sobre el restaurante._  :man_cook:  :woman_cook:  
+-_Sección "Menú" que muestra los diferentes tipos de productos disponibles y su descripción._  :pizza:  :fries:  :beer:  
+-_Sección "Blog" que incluye dos artículos._  :nerd_face:  
+-_Formulario de reservas y sus condiciones._  :date:  
+-_Formulario modal para el inicio de sesión._  :bust_in_silhouette:  
+
+Restaurante [La Rústika Pizzería](https://playful-heliotrope-23594b.netlify.app/)  :pizza:  
+
+## Tecnologías utilizadas  :computer:  
+
+-JavaScript
+-React
+-Firebase
+-Netlify
+
+## Librerías utilizadas  :woman_technologist:  
+
+-NextUI
+-Tailwind CSS
+-Flowbite

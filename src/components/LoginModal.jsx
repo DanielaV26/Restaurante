@@ -1,14 +1,14 @@
 import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, Checkbox, Input, Link} from "@nextui-org/react";
 import {MailIcon} from './MailIcon.jsx';
 import {LockIcon} from './LockIcon.jsx';
-import { BebidasSvg } from "./BebidasSvg.jsx";
+import { LoginSvg } from "./LoginSvg.jsx";
 
 export const LoginModal= () => {
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
   return (
     <>
-      <BebidasSvg className="cursor-pointer w-12 h-12" onClick = {onOpen}/>
+      <LoginSvg className="cursor-pointer w-10 h-10" onClick = {onOpen}/>
       <Modal 
         isOpen={isOpen} 
         onOpenChange={onOpenChange}
@@ -17,7 +17,7 @@ export const LoginModal= () => {
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">Log in</ModalHeader>
+              <ModalHeader className="flex flex-col gap-1">Iniciar sesión</ModalHeader>
               <ModalBody>
                 <Input
                   autoFocus
@@ -25,15 +25,15 @@ export const LoginModal= () => {
                     <MailIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
                   }
                   label="Email"
-                  placeholder="Enter your email"
+                  placeholder="Ingresa tu email"
                   variant="bordered"
                 />
                 <Input
                   endContent={
                     <LockIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
                   }
-                  label="Password"
-                  placeholder="Enter your password"
+                  label="Contraseña"
+                  placeholder="Ingresa tu password"
                   type="password"
                   variant="bordered"
                 />
@@ -43,19 +43,19 @@ export const LoginModal= () => {
                       label: "text-small",
                     }}
                   >
-                    Remember me
+                    Recuérdame
                   </Checkbox>
-                  <Link color="primary" href="#" size="sm">
-                    Forgot password?
+                  <Link className="text-green-500" href="#" size="sm">
+                    ¿Olvidaste tu contraseña?
                   </Link>
                 </div>
               </ModalBody>
               <ModalFooter>
-                <Button color="danger" variant="flat" onPress={onClose}>
-                  Close
+                <Button className="text-slate-600 hover:text-green-500 font-semibold border border-green-400" variant="flat" onPress={onClose}>
+                  Registrarme
                 </Button>
-                <Button color="primary" onPress={onClose}>
-                  Sign in
+                <Button className="text-white font-semibold bg-gradient-to-r from-green-400 via-green-500 to-green-600 enabled:hover:bg-gradient-to-br focus:ring-green-300 dark:focus:ring-green-800  focus:ring-2"  onPress={onClose}>
+                  Ingresar
                 </Button>
               </ModalFooter>
             </>

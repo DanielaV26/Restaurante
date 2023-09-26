@@ -1,7 +1,6 @@
 import { Button, Label, TextInput, Select, Datepicker, Textarea} from 'flowbite-react';
 import { db } from '../firebase/firebase';
 import { useState } from 'react';
-import moment from "moment"
 
 export const FormularioReservas = () => {
   const initialForm = {
