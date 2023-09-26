@@ -1,13 +1,14 @@
 import { Button, Label, TextInput, Select, Datepicker, Textarea} from 'flowbite-react';
 import { db } from '../firebase/firebase';
 import { useState } from 'react';
+import moment from "moment"
 
 export const FormularioReservas = () => {
   const initialForm = {
     nombre: '',
     email:'',
     sector:'',
-    sucursal:'',
+    sucursal:'Maipú',
     fecha:'',
     comensales:'',
     comentario:'',
@@ -26,6 +27,7 @@ export const FormularioReservas = () => {
   const envioDeFormulario = async (evento) => {
     evento.preventDefault()
     console.log(reserva)
+    await db.collection("reserva").add(reserva)
   }
 
 
@@ -113,8 +115,10 @@ export const FormularioReservas = () => {
           value="Selecciona la fecha"
         />
       </div>
-    <Datepicker 
-    onChange={manipuladorDeFormulario}
+    <Datepicker
+    minDate={new Date}
+    onChangeCapture={manipuladorDeFormulario}
+    onSelectedDateChanged={manipuladorDeFormulario}
     name="fecha"
     value={reserva.fecha}
     weekStart={3} labelClearButton="Limpiar" labelTodayButton='Hoy' language="es" autoHide/>

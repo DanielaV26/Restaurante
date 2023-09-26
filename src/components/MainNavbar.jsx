@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import {
     Avatar,
+    Button,
     Dropdown,
     DropdownItem,
     DropdownMenu,
@@ -12,12 +13,15 @@ import {
     NavbarMenu,
     NavbarMenuItem,
     NavbarMenuToggle,
+    button,
 } from "@nextui-org/react";
 import { LogoTradicion } from "./LogoTradicion";
 import { useState } from "react";
+import { LoginModal } from "./LoginModal";
 
 export const MainNavbar = () => {
   const [isMenuOpen,setIsMenuOpen] = useState(false)
+  const [user, setUser] = useState(null)
 
   return (
     <Navbar className="h-28" isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
@@ -57,7 +61,10 @@ export const MainNavbar = () => {
         
         <Dropdown placement="bottom-end">
           <DropdownTrigger>
-            <Avatar
+            <>
+            {
+              user?
+              <Avatar
               isBordered
               as="button"
               className="transition-transform"
@@ -66,6 +73,10 @@ export const MainNavbar = () => {
               size="sm"
               src="https://i.pravatar.cc/150"
             />
+            :<LoginModal/>
+            }
+            
+            </>
           </DropdownTrigger>
           <DropdownMenu aria-label="Profile Actions" variant="flat">
             <DropdownItem key="profile" className="h-14 gap-2">

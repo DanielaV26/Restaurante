@@ -1,8 +1,9 @@
-# React + Vite
+# Restaurante
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación que consume una API para obtener datos y graficarlos.
 
-Currently, two official plugins are available:
+## Tercer proyecto Bootcamp UDD
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+En este proyecto se trabajó con la librería de gráficas llamada Chart.js y además se hizo una conexión a través de la API de Pokémon para obtener sus datos, específicamente sobre las habilidades de los Pokemones.
+
+[Dashboard]

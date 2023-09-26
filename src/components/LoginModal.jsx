@@ -1,13 +1,14 @@
 import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, Checkbox, Input, Link} from "@nextui-org/react";
 import {MailIcon} from './MailIcon.jsx';
 import {LockIcon} from './LockIcon.jsx';
+import { BebidasSvg } from "./BebidasSvg.jsx";
 
-export default function App() {
+export const LoginModal= () => {
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
   return (
     <>
-      <Button onPress={onOpen} color="primary">Open Modal</Button>
+      <BebidasSvg className="cursor-pointer w-12 h-12" onClick = {onOpen}/>
       <Modal 
         isOpen={isOpen} 
         onOpenChange={onOpenChange}
