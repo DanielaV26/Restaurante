@@ -4,6 +4,8 @@ Página web de un Restaurante de Pizzas.
 
 Restaurante [La Rústika Pizzería](https://playful-heliotrope-23594b.netlify.app/)  :pizza:  
 
+![Pizzería](https://res.cloudinary.com/dhijxrbsk/image/upload/v1695941939/CapturaProyecto_qi4aaf.png)  
+
 ## Cuarto proyecto Bootcamp UDD
 
 Este proyecto está enfocado en construir una aplicación web para un restaurante. En él se incluye:
