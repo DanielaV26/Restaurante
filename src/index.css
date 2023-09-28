@@ -2,3 +2,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+*:focus {
+    outline: none !important;
+    border-color: inherit !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  input[type=text]{border-color: transparent !important;}
+  input[type=password]{border-color: transparent !important;}

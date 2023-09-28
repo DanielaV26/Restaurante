@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import {
     Avatar,
@@ -19,7 +20,7 @@ import { LogoTradicion } from "./LogoTradicion";
 import { useState } from "react";
 import { LoginModal } from "./LoginModal";
 
-export const MainNavbar = () => {
+export const MainNavbar = ({onLoginGoogle, usuario, onLogOut}) => {
   const [isMenuOpen,setIsMenuOpen] = useState(false)
   const [user, setUser] = useState(null)
 
@@ -59,35 +60,37 @@ export const MainNavbar = () => {
         
         <NavbarMenuToggle className="sm:hidden" aria-label={isMenuOpen?"Close menu":"Open menu"}/>
         
-        <Dropdown placement="bottom-end">
-          <DropdownTrigger>
+        
             <>
             {
-              user?
+              usuario?
+              <Dropdown placement="bottom-end">
+          <DropdownTrigger>
               <Avatar
               isBordered
               as="button"
               className="transition-transform"
-              color="secondary"
-              name="Jason Hughes"
+              color="success"
+              name={usuario.displayName}
               size="sm"
-              src="https://i.pravatar.cc/150"
+              src = {usuario.photoURL}
             />
-            :<LoginModal/>
-            }
-            
-            </>
-          </DropdownTrigger>
+            </DropdownTrigger>
           <DropdownMenu aria-label="Profile Actions" variant="flat">
             <DropdownItem key="profile" className="h-14 gap-2">
               <p className="font-semibold">Sesión iniciada como</p>
-              <p className="font-semibold">zoey@example.com</p>
+              <p className="font-semibold">{usuario.email}</p>
             </DropdownItem>
             <DropdownItem key="team_settings">Configuración</DropdownItem>
             <DropdownItem key="configurations">Mis reservas</DropdownItem>
-            <DropdownItem key="logout" color="danger">Cerrar sesión</DropdownItem>
+            <DropdownItem onClick={onLogOut} key="logout" color="danger">Cerrar sesión</DropdownItem>
           </DropdownMenu>
         </Dropdown>
+            :<LoginModal onLoginGoogle={onLoginGoogle}/>
+            }
+            
+            </>
+          
       </NavbarContent>
       <NavbarMenu>
         <NavbarMenuItem>

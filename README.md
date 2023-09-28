@@ -1,6 +1,6 @@
 # Restaurante
 
-Página web de un Restaurante de Pizzas, en donde se pueden generar reservas.
+Página web de un Restaurante de Pizzas.
 
 Restaurante [La Rústika Pizzería](https://playful-heliotrope-23594b.netlify.app/)  :pizza:  
 
@@ -21,6 +21,7 @@ Este proyecto está enfocado en construir una aplicación web para un restaurant
 - React
 - Firebase
 - Netlify
+- Cloudinary
 
 ## Librerías utilizadas  :woman_technologist:  
 

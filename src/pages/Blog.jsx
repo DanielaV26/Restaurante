@@ -28,7 +28,9 @@ export const Blog = () => {
             <p className="text-tiny text-white/70">Un verdadero fanático de la pizza debe conocer su historia. <p></p> ¡Te invitamos a conocerla!</p>
           </div>
         </div>
-        <Button as = {Link} to = {"https://www.youtube.com/watch?v=qLhroUktqfU&ab_channel=Infonimados"} radius="full" size="sm">Ver video</Button>
+        <a target="_blank" href="https://www.youtube.com/watch?v=qLhroUktqfU&ab_channel=Infonimados">
+        <Button radius="full" size="sm">Ver video</Button>
+        </a>
       </CardFooter>
     </Card>
     
@@ -53,7 +55,8 @@ export const Blog = () => {
             <p className="text-tiny text-white/70">Mantente actualizado sobre las mejores pizzerías del mundo.</p>
           </div>
         </div>
-        <Button as = {Link} to = {"https://www.elperiodico.com/es/cata-mayor/restaurantes/20230503/50-top-pizza-europa-2023-sartoria-panatieri-mejor-pizzeria-86814804"} radius="full" size="sm">Ver artículo</Button>
+        <a target="_blank" href="https://www.elperiodico.com/es/cata-mayor/restaurantes/20230503/50-top-pizza-europa-2023-sartoria-panatieri-mejor-pizzeria-86814804">
+        <Button radius="full" size="sm">Ver artículo</Button></a>
       </CardFooter>
     </Card>
     </div>

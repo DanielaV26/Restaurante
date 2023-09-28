@@ -2,8 +2,9 @@ import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDis
 import {MailIcon} from './MailIcon.jsx';
 import {LockIcon} from './LockIcon.jsx';
 import { LoginSvg } from "./LoginSvg.jsx";
+import { GoogleSvg } from "./GoogleSvg.jsx";
 
-export const LoginModal= () => {
+export const LoginModal= ({onLoginGoogle}) => {
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
   return (
@@ -33,12 +34,13 @@ export const LoginModal= () => {
                     <LockIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
                   }
                   label="Contraseña"
-                  placeholder="Ingresa tu password"
+                  placeholder="Ingresa tu contraseña"
                   type="password"
                   variant="bordered"
                 />
                 <div className="flex py-2 px-1 justify-between">
                   <Checkbox
+                  color="success"
                     classNames={{
                       label: "text-small",
                     }}
@@ -49,6 +51,7 @@ export const LoginModal= () => {
                     ¿Olvidaste tu contraseña?
                   </Link>
                 </div>
+                
               </ModalBody>
               <ModalFooter>
                 <Button className="text-slate-600 hover:text-green-500 font-semibold border border-green-400" variant="flat" onPress={onClose}>
@@ -58,6 +61,9 @@ export const LoginModal= () => {
                   Ingresar
                 </Button>
               </ModalFooter>
+              <hr />
+              <span className="mx-auto my-2">ó</span>
+              <Button onClick={onLoginGoogle} onPress={onClose} className="mx-16 mb-6"> <GoogleSvg/>Inicia sesión con Google</Button>
             </>
           )}
         </ModalContent>
